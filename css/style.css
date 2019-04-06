@@ -1,3 +1,38 @@
-div#map {
-    min-height: 360px;
+
+
+/*------Background Image / All Content Wrapper---- */
+
+.bg-img {
+    background-image: url("pictures/travel.jpg");
+    background-color: #8d97a8;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    padding: 0;
+}
+
+/*---------Main Wrapper (enables all page to scrool over the background image)---*/
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow-y: scroll;
+    
+}
+
+
+
+/* ------------------ Map ----*/
+
+#map {
+    height: 100%;
+    box-shadow: 0px 0px 6px 4px;
+}
+
+.map {
+    height: 60%;
+    width: 100%;
+    top: 483px;
 }
