@@ -18,87 +18,50 @@
     <div class="container-fluid bg-img">
         <div class="main">
             <div class="container-fluid map">
-                <div id="findhotels">
-                    Find hotels in:
-                </div>
+                <div class="pac-card" id="pac-card">
+                    <div>
+                        <div id="title">
+                            Countries
+                        </div>
+                        <div id="country-selector" class="pac-controls">
+                            <input type="radio" name="type" id="changecountry-jap">
+                            <label for="changecountry-jap">JAPAN</label>
 
-                <div id="locationField">
-                    <input id="autocomplete" placeholder="Enter a city" type="text" />
-                </div>
+                            <input type="radio" name="type" id="changecountry-usa">
+                            <label for="changecountry-usa">USA</label>
 
-                <div id="controls">
-                    <!--<div id="country">
-                        <button type="radio" value="all">All</button>
-                        <button type="radio" value="Tokyo">Tokyo, JAPAN</button>
-                        <button type="radio"  value="New York">New York, US</button>
-                        <button type="radio"  value="Rio de Janeiro">Rio de Janeiro, BRASIL</button>
-                        <button type="radio"  value="London">London, UK</button>
-                        <button type="radio"  value="Cape Town">Cape Town, SOUTH AFRICA</button>
-                    </div>-->
+                            <input type="radio" name="type" id="changecountry-bra">
+                            <label for="changecountry-bra">BRASIL</label>
 
-                    <select id="country">
-                        <option value="all">All</option>
-                        <option value="au">Australia</option>
-                        <option value="br">Brazil</option>
-                        <option value="ca">Canada</option>
-                        <option value="fr">France</option>
-                        <option value="de">Germany</option>
-                        <option value="mx">Mexico</option>
-                        <option value="nz">New Zealand</option>
-                        <option value="it">Italy</option>
-                        <option value="za">South Africa</option>
-                        <option value="es">Spain</option>
-                        <option value="pt">Portugal</option>
-                        <option value="us" selected>U.S.A.</option>
-                        <option value="uk">United Kingdom</option>
-                    </select>
+                            <input type="radio" name="type" id="changecountry-gbp">
+                            <label for="changecountry-gbp">UK</label>
 
+                            <input type="radio" name="type" id="changecountry-saf">
+                            <label for="changecountry-saf">SOUTH AFRICA</label>
 
-                </div>
-
-                <div id="map"></div>
-
-                <div id="listing">
-                    <table id="resultsTable">
-                        <tbody id="results"></tbody>
-                    </table>
-                </div>
-
-                <div style="display: none">
-                    <div id="info-content">
-                        <table>
-                            <tr id="iw-url-row" class="iw_table_row">
-                                <td id="iw-icon" class="iw_table_icon"></td>
-                                <td id="iw-url"></td>
-                            </tr>
-                            <tr id="iw-address-row" class="iw_table_row">
-                                <td class="iw_attribute_name">Address:</td>
-                                <td id="iw-address"></td>
-                            </tr>
-                            <tr id="iw-phone-row" class="iw_table_row">
-                                <td class="iw_attribute_name">Telephone:</td>
-                                <td id="iw-phone"></td>
-                            </tr>
-                            <tr id="iw-rating-row" class="iw_table_row">
-                                <td class="iw_attribute_name">Rating:</td>
-                                <td id="iw-rating"></td>
-                            </tr>
-                            <tr id="iw-website-row" class="iw_table_row">
-                                <td class="iw_attribute_name">Website:</td>
-                                <td id="iw-website"></td>
-                            </tr>
-                        </table>
+                            <input type="radio" name="type" id="changecountry-all" checked="checked">
+                            <label for="changecountry-all">ALL</label>
+                        </div>
                     </div>
+                    <div id="pac-container">
+                        <input id="pac-input" type="text" placeholder="Enter a location" style="width: 100%">
+                    </div>
+                </div>
+                <div id="map"></div>
+                <div id="infowindow-content">
+                    <img src="" width="16" height="16" id="place-icon">
+                    <span id="place-name" class="title"></span><br>
+                    <span id="place-address"></span>
                 </div>
             </div>
         </div>
+    </div>
 
 
-
-        <script src="js/maps.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoWrzwLiAbb6tu3i366nSiheFe973I2k4&libraries=places&callback=initMap" async defer></script>
+    <script src="js/maps.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoWrzwLiAbb6tu3i366nSiheFe973I2k4&libraries=places&callback=initMap" async defer></script>
 
 </body>
 
