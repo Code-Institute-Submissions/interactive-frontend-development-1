@@ -1,8 +1,11 @@
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 50.064192, lng: -130.605469 },
-        zoom: 3
+        center: { lat: 40.730610, lng: -73.935242 },
+        zoom: 8
     });
+    
+    
+    
     var card = document.getElementById('pac-card');
     var input = document.getElementById('pac-input');
     var countries = document.getElementById('country-selector');
