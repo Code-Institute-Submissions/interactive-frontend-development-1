@@ -15,8 +15,13 @@
 </head>
 
 <body>
+    
+    <!---Main wrappers-->
     <div class="container-fluid bg-img">
         <div class="main">
+            
+            <!--Navbar-->
+            
             <nav class="navbar">
                 <div class="container-fluid" id="navbar-r">
                     <div class="navbar-header">
@@ -25,6 +30,9 @@
                     <p class="navbar-text navbar-right" id="navbar-right"><a href="#" class="navbar-link">Contact</a></p>
                 </div>
             </nav>
+            
+            <!-- Map elements wrapper-->
+            
             <div class="container-fluid map">
                 <div class="pac-card" id="pac-card">
                     <div>
@@ -62,6 +70,21 @@
                     <span id="place-address"></span>
                 </div>
             </div>
+            
+            <!--Contact form-->            
+            
+            <div class="container-fluid">
+                <div class="center-form">
+                    <form onsubmit="return sendMail(this);">
+                        <input type="text" name="name" class="form-c form-control" id="fullname" placeholder="Name" required/>
+                        <input type="text" name="emailaddress" class="form-c form-control" id="emailaddress" placeholder="Email" required/>
+                        <textarea rows="5" name="projectsummary" class="form-c form-control" id="projectsummary" placeholder="Contact us!" required></textarea>
+                        <button type="submit" class="btn btn-secondary center-block">Send Your Request</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!--Footer-->
 
             <footer class="page-footer font-small blue fixed-bottom ">
                 <div class="footer-copyright text-center py-3 footer-bg">© 2018 Copyright: Marius G. Dumitru <br> Milestone Project for
@@ -72,8 +95,16 @@
     </div>
 
 
+    <!--Scripts-->
+
     <script src="js/maps.js"></script>
+    
+    <!-- jQuery CDN -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Maps scripts-->
+    
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoWrzwLiAbb6tu3i366nSiheFe973I2k4&libraries=places&callback=initMap" async defer></script>
 

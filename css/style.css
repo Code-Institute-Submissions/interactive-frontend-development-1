@@ -4,6 +4,8 @@
 
 html,
 body {
+    position: relative;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     background-color: #9a9c9e;
@@ -29,19 +31,23 @@ body {
     height: 100%;
     position: absolute;
     overflow-y: scroll;
-    
+
 }
 
 /* ------------------ Navbar ----*/
 
 #navbar-r {
-    background-color: rgba(136,136,136,0.5);
+    background-color: rgba(136, 136, 136, 0.5);
     color: #fff;
 }
 
 #navbar-r p {
     margin-right: 15px;
     font-size: 16px;
+}
+
+.navbar-header a {
+    font-size: 34px;
 }
 
 nav a {
@@ -60,12 +66,36 @@ nav a {
     height: 60%;
     width: 100%;
     top: 483px;
+    padding: 20px;
+}
+
+/* ------------------ Contact form ----*/
+
+.form-c {
+    background-color: rgba(136, 136, 136, 0.5);
+}
+
+form textarea::placeholder,
+form input::placeholder {
+    color: #fff !important;
 }
 
 /* ------------------ Footer ----*/
 
 footer .footer-bg {
     padding-top: 15px;
-    background-color: rgba(136,136,136,0.5);
+    background-color: rgba(136, 136, 136, 0.5);
     color: #fff;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+footer a {
+    color: #e54725;
 }
