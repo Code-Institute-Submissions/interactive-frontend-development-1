@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_fxyyZvdUfQ4tvxR16n9CF");
+        })();
+    </script>
+
 </head>
 
 <body>
@@ -75,11 +82,11 @@
 
             <div class="container-fluid" id="ct-form">
                 <div class="center-form" id="cont-form">
-                    <form onsubmit="return sendMail(this);">
+                    <form onsubmit="return sendMail(this);" id="form" method="POST">
                         <input type="text" name="name" class="form-c form-control" id="fullname" placeholder="Name" required/>
                         <input type="text" name="emailaddress" class="form-c form-control" id="emailaddress" placeholder="Email" required/>
                         <textarea rows="5" name="projectsummary" class="form-c form-control" id="projectsummary" placeholder="Contact us!" required></textarea>
-                        <button type="submit" class="btn btn-secondary center-block">Send Your Request</button>
+                        <button type="submit" class="btn btn-secondary center-block" id="btn-pd">Send Your Request</button>
                     </form>
                 </div>
             </div>
@@ -95,14 +102,16 @@
     </div>
 
 
-    <!--Scripts-->
-    <script src="js/maps.js"></script>
+    <!--Email Script-->
+    <script src="js/sendemail.js"></script>
+    
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="js/jQuery.js"></script>
 
     <!-- Maps scripts-->
+    <script src="js/maps.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoWrzwLiAbb6tu3i366nSiheFe973I2k4&libraries=places&callback=initMap" async defer></script>
 
