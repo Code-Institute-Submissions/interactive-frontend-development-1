@@ -80,6 +80,10 @@ form input::placeholder {
     color: #fff !important;
 }
 
+#ct-form {
+    height: 216px;
+}
+
 /* ------------------ Footer ----*/
 
 footer .footer-bg {
