@@ -1,1 +1,3 @@
-console.log("spec");
+describe("sendMail", function() {
+    
+})
