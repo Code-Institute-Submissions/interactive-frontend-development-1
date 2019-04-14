@@ -37,40 +37,44 @@
                     <p class="navbar-text navbar-right" id="navbar-right"><a href="#" class="navbar-link">Contact</a></p>
                 </div>
             </nav>
-            
+
             <!-- Header-->
 
             <div class="container-fluid">
                 <h1>Select one of the countries to find your perfect holiday!</h1>
                 <h2>Not decided? You can select ALL to search on all of them!</h2>
             </div>
-            
-            <!--Contact form-->
 
-            <div class="container-fluid" id="ct-form">
-                <div id="cont-form">
-                    <form onsubmit="return sendMail(this);" id="form" method="POST">
-                        <input type="text" name="name" class="form-c form-control" id="fullname" placeholder="Name" required/>
-                        <input type="text" name="emailaddress" class="form-c form-control" id="emailaddress" placeholder="Email" required/>
-                        <textarea rows="5" name="projectsummary" class="form-c form-control" id="projectsummary" placeholder="Contact us!" required></textarea>
-                        <button type="submit" class="btn btn-secondary center-block" id="btn-pd">Send Your Request</button>
-                    </form>
+            <!--Contact form & info wrapper-->
+
+            <div class="container-fluid">
+                <div class="row">
+                    
+                    <!-- Info --> 
+                     
+                    <div class="col-md-8 col-lg-8">
+                        <p>Find below some recommendations:</p>
+                        <button type="button" class="btn btn-info">Tokyo</button>
+                        <button type="button" class="btn btn-info">New York</button>
+                        <button type="button" class="btn btn-info">Rio de Janeiro</button>
+                        <button type="button" class="btn btn-info">London</button>
+                        <button type="button" class="btn btn-info">Cape Town</button>
+                    </div>
+                    
+                    <!--Contact form -->
+                    
+                    <div class="col-md-4 col-lg-4" id="ct-form">
+                        <div id="cont-form">
+                            <form onsubmit="return sendMail(this);" id="form" method="POST">
+                                <input type="text" name="name" class="form-c form-control" id="fullname" placeholder="Name" required/>
+                                <input type="text" name="emailaddress" class="form-c form-control" id="emailaddress" placeholder="Email" required/>
+                                <textarea rows="5" name="projectsummary" class="form-c form-control" id="projectsummary" placeholder="Contact us!" required></textarea>
+                                <button type="submit" class="btn btn-secondary center-block" id="btn-pd">Send Your Request</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            
-
-            <!--- Search Buttons for maps -->
-
-            <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option1"> Hotels
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option2"> Restaurants
-                </label>
-            </div>
-
 
             <!-- Map elements wrapper-->
 

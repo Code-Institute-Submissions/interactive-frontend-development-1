@@ -87,7 +87,6 @@ form input::placeholder {
 
 #cont-form {
     width: 300px;
-    float: right;
 }
 
 
@@ -98,10 +97,6 @@ footer .footer-bg {
     color: #fff;
 }
 
-footer {
-    
-    height: 100px;
-}
 
 footer a {
     color: #e54725;
