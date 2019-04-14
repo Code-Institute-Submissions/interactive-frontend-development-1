@@ -303,7 +303,7 @@ function buildIWContent(place) {
                 ratingHtml += '&#x02606;';
             }
             else {
-                ratingHtml += '&#x02605;';
+                ratingHtml += '&#11088;';
             }
             document.getElementById('iw-rating-row').style.display = '';
             document.getElementById('iw-rating').innerHTML = ratingHtml;
