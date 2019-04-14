@@ -58,15 +58,26 @@ nav a {
 /* ------------------ Map ----*/
 
 #map {
-    height: 83%;
-    width: 70%;
+    height: 75%;
+    width: 100%;
     box-shadow: 0px 0px 6px 4px;
 }
 
 .map {
-    height: 80%;
+    height: 100%;
+    width: 100;
     padding: 20px;
 }
+
+.map-c {
+    height: 100%;
+}
+
+#resultsTable {
+    box-shadow: 0px 0px 6px 4px;
+}
+
+
 
 /*------------------- Info -----------*/
 
@@ -74,7 +85,7 @@ nav a {
     display: none;
     position: absolute;
     width: 600px;
-    background-color: rgba(153,153,153,0.6);
+    background-color: rgba(153, 153, 153, 0.6);
     color: #fff;
     font-size: 16px;
     overflow-x: auto;
