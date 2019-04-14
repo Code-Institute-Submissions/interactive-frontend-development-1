@@ -68,6 +68,17 @@ nav a {
     padding: 20px;
 }
 
+/*------------------- Info -----------*/
+
+.info {
+    position: relative;
+    height: 200px;
+    width: 600px;
+    overflow-x: auto;
+    overflow-y: scroll;
+    
+}
+
 
 /* ------------------ Contact form ----*/
 
