@@ -37,64 +37,92 @@
                     <p class="navbar-text navbar-right" id="navbar-right"><a href="#" class="navbar-link">Contact</a></p>
                 </div>
             </nav>
-
+            
             <!-- Header-->
 
             <div class="container-fluid">
                 <h1>Select one of the countries to find your perfect holiday!</h1>
                 <h2>Not decided? You can select ALL to search on all of them!</h2>
             </div>
-
-            <!-- Map elements wrapper-->
-
-            <div class="container-fluid map">
-                <div class="pac-card" id="pac-card">
-                    <div>
-                        <div id="title">
-                            Countries
-                        </div>
-                        <div id="country-selector" class="pac-controls">
-                            <input type="radio" name="type" id="changecountry-jap">
-                            <label for="changecountry-jap">JAPAN</label>
-
-                            <input type="radio" name="type" id="changecountry-usa">
-                            <label for="changecountry-usa">USA</label>
-
-                            <input type="radio" name="type" id="changecountry-bra">
-                            <label for="changecountry-bra">BRASIL</label>
-
-                            <input type="radio" name="type" id="changecountry-gbp">
-                            <label for="changecountry-gbp">UK</label>
-
-                            <input type="radio" name="type" id="changecountry-saf">
-                            <label for="changecountry-saf">SOUTH AFRICA</label>
-
-                            <input type="radio" name="type" id="changecountry-all" checked="checked">
-                            <label for="changecountry-all">ALL</label>
-                        </div>
-                    </div>
-                    <div id="pac-container">
-                        <input id="pac-input" type="text" placeholder="Enter a location" style="width: 100%">
-                    </div>
-                </div>
-                <div id="map"></div>
-                <div id="infowindow-content">
-                    <img src="" width="16" height="16" id="place-icon">
-                    <span id="place-name" class="title"></span><br>
-                    <span id="place-address"></span>
-                </div>
-            </div>
-
+            
             <!--Contact form-->
 
             <div class="container-fluid" id="ct-form">
-                <div class="center-form" id="cont-form">
+                <div id="cont-form">
                     <form onsubmit="return sendMail(this);" id="form" method="POST">
                         <input type="text" name="name" class="form-c form-control" id="fullname" placeholder="Name" required/>
                         <input type="text" name="emailaddress" class="form-c form-control" id="emailaddress" placeholder="Email" required/>
                         <textarea rows="5" name="projectsummary" class="form-c form-control" id="projectsummary" placeholder="Contact us!" required></textarea>
                         <button type="submit" class="btn btn-secondary center-block" id="btn-pd">Send Your Request</button>
                     </form>
+                </div>
+            </div>
+
+            
+
+            <!--- Search Buttons for maps -->
+
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option1"> Hotels
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option2"> Restaurants
+                </label>
+            </div>
+
+
+            <!-- Map elements wrapper-->
+
+            <div class="container-fluid map">
+                <div id="locationField">
+                    <input id="autocomplete" placeholder="Enter a city" type="text" />
+                </div>
+
+                <div id="controls">
+                    <select id="country">
+                        <option value="all"selected>All</option>
+                        <option value="jp">JAPAN</option>
+                        <option value="us">U.S.A.</option>    
+                        <option value="br">BRASIL</option>
+                        <option value="uk">UK</option>
+                        <option value="za">SOUTH AFRICA</option>  
+                    </select>
+                </div>
+
+                <div id="map"></div>
+
+                <div id="listing">
+                    <table id="resultsTable">
+                        <tbody id="results"></tbody>
+                    </table>
+                </div>
+
+                <div style="display: none">
+                    <div id="info-content">
+                        <table>
+                            <tr id="iw-url-row" class="iw_table_row">
+                                <td id="iw-icon" class="iw_table_icon"></td>
+                                <td id="iw-url"></td>
+                            </tr>
+                            <tr id="iw-address-row" class="iw_table_row">
+                                <td class="iw_attribute_name">Address:</td>
+                                <td id="iw-address"></td>
+                            </tr>
+                            <tr id="iw-phone-row" class="iw_table_row">
+                                <td class="iw_attribute_name">Telephone:</td>
+                                <td id="iw-phone"></td>
+                            </tr>
+                            <tr id="iw-rating-row" class="iw_table_row">
+                                <td class="iw_attribute_name">Rating:</td>
+                                <td id="iw-rating"></td>
+                            </tr>
+                            <tr id="iw-website-row" class="iw_table_row">
+                                <td class="iw_attribute_name">Website:</td>
+                                <td id="iw-website"></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
 
