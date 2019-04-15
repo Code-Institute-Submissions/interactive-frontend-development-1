@@ -18,6 +18,7 @@ body {
     background-image: url("pictures/travel.jpg");
     background-color: #8d97a8;
     background-position: center;
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -149,6 +150,11 @@ form input::placeholder {
 
 /* ------------------ Footer ----*/
 
+footer {
+    position: relative;
+    bottom: 0;
+}
+
 footer .footer-bg {
     background-color: rgba(136, 136, 136, 0.5);
     color: #fff;
@@ -193,7 +199,13 @@ footer a {
     .info {
         width: 92%;
         height: 200px;
+        font-size: 12px;
         overflow-x: auto;
         overflow-y: scroll;
+    }
+    
+    footer {
+        position: relative;
+        bottom: -523px;
     }
 }
