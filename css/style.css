@@ -77,7 +77,7 @@ nav a {
     position: relative;
     width: 20%;
     height: 25px;
-    left:1.5%;
+    left: 1.5%;
     z-index: 5;
     background-color: #fff;
     box-shadow: 0px 0px 6px 4px;
@@ -115,6 +115,7 @@ nav a {
     display: none;
     position: absolute;
     width: 600px;
+    height: 150px;
     background-color: rgba(153, 153, 153, 0.6);
     color: #fff;
     font-size: 16px;
@@ -156,4 +157,43 @@ footer .footer-bg {
 
 footer a {
     color: #e54725;
+}
+
+
+/* --------Media Query ----*/
+
+@media (max-width: 414px) {
+    #listing {
+        position: relative;
+        width: 80%;
+        height: 80%;
+        overflow-y: scroll;
+    }
+    #locationField {
+        width: 40%;
+        left: 3.5%;
+    }
+
+    #controls {
+        left: 76%;
+    }
+    .map-c {
+        height: 80%;
+    }
+    h1 {
+        font-size: 19px;
+    }
+    h2 {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .info {
+        width: 92%;
+        height: 200px;
+        overflow-x: auto;
+        overflow-y: scroll;
+    }
 }
