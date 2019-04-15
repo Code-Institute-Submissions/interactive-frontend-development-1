@@ -75,9 +75,9 @@ nav a {
 
 #locationField {
     position: relative;
-    width: 215px;
+    width: 20%;
     height: 25px;
-    top: -22px;
+    left:1.5%;
     z-index: 5;
     background-color: #fff;
     box-shadow: 0px 0px 6px 4px;
@@ -85,9 +85,9 @@ nav a {
 
 #controls {
     position: relative;
-    left: 300px;
-    width: 140px;
-    top: -45px;
+    left: 45%;
+    width: 20%;
+    top: -23px;
     z-index: 5;
     background-color: #fff;
     box-shadow: 0px 0px 6px 4px;
