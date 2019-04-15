@@ -14,6 +14,8 @@ var countryRestrict = { 'country': 'us' };
 var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
 
+var request; //added
+
 var countries = {
     'jp': {
         center: { lat: 35.6, lng: 139.8 },
@@ -148,7 +150,55 @@ function initMap() {
     // Add a DOM event listener to react when the user selects a country.
     document.getElementById('country').addEventListener(
         'change', setAutocompleteCountry);
+    //added        
+    google.maps.event.addListener(map, 'rightclick', function(event) {
+        map.setCenter(event.latLng),
+            clearResults(markers);
+
+        var request = {
+            location: event.latLng,
+            radius: 8047,
+            types: ['museum']
+        };
+        places.nearbySearch(request, callback);
+    });
+} //
+
+//added
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            markers.push(createMarker(results[i]));
+        }
+    }
+} //
+
+//added
+function createMarker(place) {
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.setContent(place.name);
+        infoWindow.open(map, this);
+    });
+    return marker;
+
+} //
+
+
+function clearMarkers() {
+    for (var i = 0; i < markers.length; i++) {
+        if (markers[i]) {
+            markers[i].setMap(null);
+        }
+    }
+    markers = [];
 }
+
 
 // When the user selects a city, get the place details for the city and
 // zoom the map in on the city.
@@ -164,11 +214,13 @@ function onPlaceChanged() {
     }
 }
 
+google.maps.event.addDomListener(window, 'load', initMap);
+
 // Search for hotels in the selected city, within the viewport of the map.
 function search() {
     var search = {
         bounds: map.getBounds(),
-        types: ['lodging' | 'cafe']
+        types: ['cafe' & 'lodging']
     };
 
     places.nearbySearch(search, function(results, status) {
@@ -186,6 +238,7 @@ function search() {
                     animation: google.maps.Animation.DROP,
                     icon: markerIcon
                 });
+
                 // If the user clicks a hotel marker, show the details of that hotel
                 // in an info window.
                 markers[i].placeResult = results[i];
@@ -197,14 +250,7 @@ function search() {
     });
 }
 
-function clearMarkers() {
-    for (var i = 0; i < markers.length; i++) {
-        if (markers[i]) {
-            markers[i].setMap(null);
-        }
-    }
-    markers = [];
-}
+
 
 // Set the country restriction based on user input.
 // Also center and zoom the map on the given country.
@@ -329,3 +375,5 @@ function buildIWContent(place) {
         document.getElementById('iw-website-row').style.display = 'none';
     }
 }
+
+
