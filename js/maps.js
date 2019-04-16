@@ -147,8 +147,8 @@ function initMap() {
     // Add a DOM event listener to react when the user selects a country.
     document.getElementById('country').addEventListener(
         'change', setAutocompleteCountry);
-    
-} 
+
+}
 
 //added
 function callback(results, status) {
@@ -173,13 +173,24 @@ function onPlaceChanged() {
     }
 }
 
-google.maps.event.addDomListener(window, 'load', initMap);
-
 // Search for hotels in the selected city, within the viewport of the map.
 function search() {
+
+    var placeType = 'lodging';
+    clearMarkers();
+    markers = [];
+
+    if (document.getElementById("restaurant").checked) placeType = 'restaurant';
+    clearMarkers();
+    markers = [];
+    if (document.getElementById("museum").checked) placeType = 'museum';
+    clearMarkers();
+    markers = [];
+
+
     var search = {
         bounds: map.getBounds(),
-        types: ['cafe' & 'lodging']
+        types: [placeType]
     };
 
     places.nearbySearch(search, function(results, status) {
@@ -210,12 +221,12 @@ function search() {
 }
 
 function clearMarkers() {
-  for (var i = 0; i < markers.length; i++) {
-    if (markers[i]) {
-      markers[i].setMap(null);
+    for (var i = 0; i < markers.length; i++) {
+        if (markers[i]) {
+            markers[i].setMap(null);
+        }
     }
-  }
-  markers = [];
+    markers = [];
 }
 
 // Set the country restriction based on user input.
@@ -341,5 +352,3 @@ function buildIWContent(place) {
         document.getElementById('iw-website-row').style.display = 'none';
     }
 }
-
-

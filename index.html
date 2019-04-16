@@ -104,9 +104,9 @@
 
                     <div id="controls">
                         <select id="country">
-                            <option value="all"selected>All</option>
+                            <option value="all">All</option>
                             <option value="jp">JAPAN</option>
-                            <option value="us">U.S.A.</option>    
+                            <option value="us" selected>U.S.A.</option>    
                             <option value="br">BRASIL</option>
                             <option value="uk">UK</option>
                             <option value="za">SOUTH AFRICA</option>  
@@ -115,7 +115,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 places-wrap">
-                        <div id="places-div" style="display: none">
+                        <div id="places-div">
                             <input onchange="search()" type="radio" id="lodging" name="option" checked="checked"/>
                             <label for="lodging">Hotel</label>
                             <input onchange="search()" type="radio" id="restaurant" name="option"/>
