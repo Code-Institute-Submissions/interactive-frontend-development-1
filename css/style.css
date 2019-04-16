@@ -103,6 +103,7 @@ nav a {
 }
 
 #listing {
+    position: relative;
     width: 80%;
     height: 75%;
     overflow: auto;
@@ -182,10 +183,11 @@ footer a {
 /* --------Media Query ----*/
 
 @media (max-width: 414px) {
+    
     #listing {
         position: relative;
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
         overflow-y: scroll;
     }
     #locationField {
@@ -208,7 +210,7 @@ footer a {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .info {
         width: 92%;
         height: 200px;
@@ -216,6 +218,14 @@ footer a {
         overflow-x: auto;
         overflow-y: scroll;
     }
+    
+    #listing {
+        position: absolute;
+        top: 77%;
+        width: 92%;
+        height: 59%;
+    }
+    
     
     footer {
         position: relative;
