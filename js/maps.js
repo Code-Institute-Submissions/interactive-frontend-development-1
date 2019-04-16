@@ -13,9 +13,6 @@ var autocomplete;
 var countryRestrict = { 'country': 'us' };
 var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
-
-var request; //added
-
 var countries = {
     'jp': {
         center: { lat: 35.6, lng: 139.8 },
@@ -150,19 +147,8 @@ function initMap() {
     // Add a DOM event listener to react when the user selects a country.
     document.getElementById('country').addEventListener(
         'change', setAutocompleteCountry);
-    //added        
-    google.maps.event.addListener(map, 'rightclick', function(event) {
-        map.setCenter(event.latLng),
-            clearResults(markers);
-
-        var request = {
-            location: event.latLng,
-            radius: 8047,
-            types: ['museum']
-        };
-        places.nearbySearch(request, callback);
-    });
-} //
+    
+} 
 
 //added
 function callback(results, status) {
@@ -171,34 +157,7 @@ function callback(results, status) {
             markers.push(createMarker(results[i]));
         }
     }
-} //
-
-//added
-function createMarker(place) {
-    var placeLoc = place.geometry.location;
-    var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-        infoWindow.setContent(place.name);
-        infoWindow.open(map, this);
-    });
-    return marker;
-
-} //
-
-
-function clearMarkers() {
-    for (var i = 0; i < markers.length; i++) {
-        if (markers[i]) {
-            markers[i].setMap(null);
-        }
-    }
-    markers = [];
 }
-
 
 // When the user selects a city, get the place details for the city and
 // zoom the map in on the city.
@@ -250,7 +209,14 @@ function search() {
     });
 }
 
-
+function clearMarkers() {
+  for (var i = 0; i < markers.length; i++) {
+    if (markers[i]) {
+      markers[i].setMap(null);
+    }
+  }
+  markers = [];
+}
 
 // Set the country restriction based on user input.
 // Also center and zoom the map on the given country.
