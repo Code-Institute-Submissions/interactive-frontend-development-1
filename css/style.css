@@ -110,6 +110,19 @@ nav a {
     overflow-x: hidden;
 }
 
+.places-wrap {
+    height: 37px;
+}
+
+#places-div {
+    position: relative;
+    width: 27%;
+    padding: 7px 7px 7px 10px;
+    margin-bottom: 10px;
+    left: 18%;
+    background-color: #fff;
+}
+
 /*------------------- Info -----------*/
 
 .info {
