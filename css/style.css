@@ -12,6 +12,16 @@ body {
     font-family: 'Fira Sans Condensed', sans-serif;
 }
 
+
+/*------- Colors------*/
+
+nav a,
+h1,
+h2,
+p {
+    color: #000;
+}
+
 /*------Background Image / All Content Wrapper---- */
 
 .bg-img {
@@ -41,30 +51,25 @@ body {
 
 .navbar-header a {
     font-size: 34px;
+    color: #000;
 }
 
-nav a {
-    color: #fff;
-}
+
 
 
 /* ------------------ Map ----*/
 
 #map {
-    height: 75%;
+    height: 631px;
     width: 100%;
     box-shadow: 0px 0px 6px 4px;
 }
 
-.map {
-    height: 100%;
-    width: 100;
-    padding: 20px;
+.map-c {
+    height: 646px;
 }
 
-.map-c {
-    height: 91%;
-}
+
 
 #locationField {
     position: relative;
@@ -96,7 +101,7 @@ nav a {
 #listing {
     position: relative;
     width: 80%;
-    height: 75%;
+    height: 631px;
     overflow: auto;
     cursor: pointer;
     overflow-x: hidden;
@@ -121,13 +126,8 @@ nav a {
 .info {
     display: none;
     position: absolute;
-    width: 600px;
-    height: 150px;
     background-color: rgba(153, 153, 153, 0.6);
-    color: #fff;
-    font-size: 16px;
-    overflow-x: auto;
-    overflow-y: scroll;
+    color: #000;
 }
 
 
@@ -174,4 +174,11 @@ footer a {
 
 /* --------Media Query ----*/
 
-
+@media only screen and (max-width: 766px) {
+    #listing {
+        width: 200px;
+        height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
