@@ -15,9 +15,9 @@ to five countries:
 also, the user should be able to search for different countries, and for this the `All` option has been introduced.
 
 2. The customer wants the user to be able to display points of interests individually:
-- HOTELS
-- RESTAURANTS
-- MUSEUMS
+- **HOTELS**
+- **RESTAURANTS**
+- **MUSEUMS**
 
 3. The customer wants the users to be able to contact them if they have a request.
 
@@ -25,4 +25,12 @@ also, the user should be able to search for different countries, and for this th
 
 
 ## UX
+
+This website is friendly, easy-to-use, and is made with responsive approach to provide the users with the best experience.
+
+- as a user, I want to be able to search for destinations, and display them on a map for better visualisation
+- as a user, I want to be able to display the results by category
+- as a user, I want to be able to contact the company if a have any requirements
+- as a user, I want to be able to find informations/ suggestions about a few destinations for better experience
+
 
