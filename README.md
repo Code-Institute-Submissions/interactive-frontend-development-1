@@ -81,5 +81,14 @@ This project has been tested both manually and automatic:
 - automated:
     - `Jasmine testing framework` was used to test the sendMail function
 
+###### BROWSERS:
+
+BROWSER | VERSION | COMPATIBILITY   
+------------------- | ----------------- | ------
+GOOGLE CHROME | _LATEST_ | **100%**
+SAFARI | _LATEST_ | **100%**
+MOZILLA FIREFOX | _LATEST_ | **100%**
+SAFARI (mobile) | _LATEST_ | **90%**
+ANDROID | _LATEST_ | **90%**
 
 
