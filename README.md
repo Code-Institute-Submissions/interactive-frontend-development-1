@@ -62,6 +62,11 @@ This website is friendly, easy-to-use, and is made with responsive approach to p
 **_[Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework))_** **was used for responsivity**![Bootstrap](http://nia.ecsu.edu/ur/1617/teams/mmt/imgs/bootstrap.png) | **_[Google Maps API](https://en.wikipedia.org/wiki/Google_Maps)_** **was used to create the map**   ![Google Maps](data:image/png;base64,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)
 **_[Emailjs](http://www.emailjs.com/)_** **was used for the contact service**![emailjs](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5Gm29aHgBEFHXAwFS2RRi4sOyBFKDA49aouFDMnwiKd5sSHh) | **_[Jasmine](https://jasmine.github.io/)_** **was used for atomated tests**![jasmine](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpZ02PvLmW4pjHVzmmUx2bHvf4jpGMfkGgJ1yaGh9ubqKohqsZ)
 
+##### DEVELOPMENT
+
+This project has been developed using the **_[Cloud9](https://c9.io)_** IDE
+
+
 #### TESING
 
 This project has been tested both manually and automatic:   
@@ -90,5 +95,27 @@ SAFARI | _LATEST_ | **100%**
 MOZILLA FIREFOX | _LATEST_ | **100%**
 SAFARI (mobile) | _LATEST_ | **90%**
 ANDROID | _LATEST_ | **90%**
+
+#### DEPLOYMENT
+
+This project can be deployed to any hosting platform. However, the structure and file names must be kept as they are.
+```
+google-maps-project
+    -css
+        -pictures
+            travel.jpg
+        style.css
+    -js
+        jQuery.js
+        maps.js
+        sendemail.js
+    -test
+        spec.js
+        test.html
+        test.js
+    index.html
+    README.md  
+```
+
 
 
