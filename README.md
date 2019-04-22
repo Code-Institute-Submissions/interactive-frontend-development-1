@@ -117,5 +117,13 @@ google-maps-project
     README.md  
 ```
 
+#### CREDITS
 
+##### CONTENT
+The `map` and pieces of code have been inspired from **_[Google Developers Console](https://console.developers.google.com)_**   
+The `background image` have been downloaded from `Google Images`  
+The informations on the `info buttons` have been written by **_[Dave Owen](https://www.gapyear.com/articles/travel-ideas/top-5-cities-around-the-world)_**
 
+##### ACKNOWLEDGEMENTS
+
+Special thanks to Moosa Hassan for the support and feedback on this project.
