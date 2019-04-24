@@ -77,8 +77,9 @@ nav a:hover {
 
 #locationField {
     position: relative;
+    margin: 2px 0 2px 0;
     width: 200px;
-    height: 25px;
+    height: 23px;
     top: 107px;
     left: 1px;
     z-index: 5;
@@ -89,7 +90,7 @@ nav a:hover {
     position: relative;
     left: 1px;
     width: 200px;
-    top: 59px;
+    top: 58px;
     z-index: 5;
 }
 
@@ -119,6 +120,8 @@ nav a:hover {
 #places-div {
     position: relative;
     width: 200px;
+    margin: 2px 0 2px 0;
+    padding: 0 0 0 11px;
     top: 86px;
     left: 1px;
     z-index: 5;
