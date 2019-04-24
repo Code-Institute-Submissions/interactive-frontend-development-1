@@ -144,7 +144,9 @@ nav a:hover {
 .info {
     display: none;
     position: absolute;
-    background-color: rgba(153, 153, 153, 0.6);
+    z-index: 5;
+    padding: 10px;
+    background-color: #ccc;
     color: #000;
 }
 
