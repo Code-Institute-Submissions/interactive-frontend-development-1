@@ -46,8 +46,8 @@ p {
 }
 
 #navbar-r p {
-    margin-right: 15px;
-    font-size: 16px;
+    margin: 9px 0 9px 0;
+    font-size: 22px;
 }
 
 .navbar-header a {
@@ -55,8 +55,10 @@ p {
     color: #000;
 }
 
-
-
+nav a:hover {
+    color:#fff;
+    text-decoration: none;
+}
 
 /* ------------------ Map ----*/
 
