@@ -145,6 +145,7 @@ nav a:hover {
 
 .form-c {
     background-color: rgba(136, 136, 136, 0.5);
+    margin: 3px;
     color: #fff;
 }
 
@@ -159,6 +160,12 @@ form input::placeholder {
 
 #cont-form {
     width: 300px;
+    float: right;
+    margin: 27px;
+}
+
+#btn-pd {
+    background-color: #5bc0de;
 }
 
 
