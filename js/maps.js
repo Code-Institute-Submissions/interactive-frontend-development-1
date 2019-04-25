@@ -1,11 +1,3 @@
-// This example uses the autocomplete feature of the Google Places API.
-// It allows the user to find all hotels in a given place, within a given
-// country. It then displays markers for all the hotels returned,
-// with on-click details for each hotel.
-
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
 var map, places, infoWindow;
 var markers = [];
@@ -36,7 +28,7 @@ var countries = {
     },
 };
 
-
+//initialize the map
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: countries['us'].zoom,
@@ -150,7 +142,7 @@ function initMap() {
 
 }
 
-//added
+
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
@@ -173,7 +165,7 @@ function onPlaceChanged() {
     }
 }
 
-// Search for hotels in the selected city, within the viewport of the map.
+// Search for places in the selected city, within the viewport of the map.
 function search() {
 
     var placeType = 'lodging';
@@ -209,7 +201,7 @@ function search() {
                     icon: markerIcon
                 });
 
-                // If the user clicks a hotel marker, show the details of that hotel
+                // If the user clicks on a marker, show the details of that place
                 // in an info window.
                 markers[i].placeResult = results[i];
                 google.maps.event.addListener(markers[i], 'click', showInfoWindow);
@@ -285,7 +277,7 @@ function clearResults() {
     }
 }
 
-// Get the place details for a hotel. Show the information in an info window,
+// Get the place details. Show the information in an info window,
 // anchored on the marker for the hotel that the user selected.
 function showInfoWindow() {
     var marker = this;
@@ -316,8 +308,8 @@ function buildIWContent(place) {
         document.getElementById('iw-phone-row').style.display = 'none';
     }
 
-    // Assign a five-star rating to the hotel, using a black star ('&#10029;')
-    // to indicate the rating the hotel has earned, and a white star ('&#10025;')
+    // Assign a five-star rating to the place, using a gold star
+    // to indicate the rating the place has earned, and a white star 
     // for the rating points not achieved.
     if (place.rating) {
         var ratingHtml = '';
