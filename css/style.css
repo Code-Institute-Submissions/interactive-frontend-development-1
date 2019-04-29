@@ -142,10 +142,14 @@ nav a:hover {
 
 /*------------------- Info -----------*/
 
+.info-div {
+    width: 100%;
+}
+
 .info {
     display: none;
     position: absolute;
-    z-index: 5;
+    z-index: 6;
     padding: 10px;
     background-color: #ccc;
     color: #000;
@@ -171,6 +175,7 @@ form input::placeholder {
     height: 216px;
     position: absolute;
     top: 41px;
+    z-index: 7;
 }
 
 #cont-form {
@@ -181,6 +186,9 @@ form input::placeholder {
 
 #btn-pd {
     background-color: #5bc0de;
+}
+.btn-info {
+    z-index: 1;
 }
 
 
@@ -217,7 +225,10 @@ footer a {
     #listing {
         display: none;
     }
-    
+}
+
+
+@media only screen and (max-width: 991px) {    
     #ct-form {
         top: 86px;
     }

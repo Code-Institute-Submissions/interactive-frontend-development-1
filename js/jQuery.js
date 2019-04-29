@@ -1,12 +1,16 @@
 $(document).ready(function() {
+    
     // Set the height of contact form div
     $("#ct-form").css("height", "216px");
+    
     //Hide the contact form
     $("#cont-form").css("display", "none");
+    
     //Toogle the contact form when click on "contact"
     $("nav p a").click(function() {
         $("#cont-form").fadeToggle();
     });
+    
     //Hover the info buttons
     $("#info-to").hover(function() {
         $(".info-to").fadeToggle(600);
