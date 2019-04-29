@@ -45,26 +45,12 @@
             <h2>Not decided? You can select ALL to search on all of them!</h2>
         </div>
 
-        <!--Contact form -->
-
-        <div class="col-md-12 col-lg-12" id="ct-form">
-            <div id="cont-form">
-                <form onsubmit="sendMail(this);" id="form" method="POST">
-                    <input type="text" name="name" class="form-c form-control" id="fullname" placeholder="Name" required/>
-                    <input type="text" name="emailaddress" class="form-c form-control" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="5" name="projectsummary" class="form-c form-control" id="projectsummary" placeholder="Contact us!" required></textarea>
-                    <button type="submit" class="btn btn-secondary center-block" id="btn-pd">Send Your Request</button>
-                </form>
-            </div>
-        </div>
-
         <!--Info wrapper-->
 
         <div class="container-fluid">
             <div class="row">
-
                 <!-- Info -->
-                <div class="col-md-12 col-lg-12 info-div">
+                <div class="col-md-8 col-lg-8">
                     <p>Find below some recommendations:</p>
                     <button type="button" class="btn btn-info" id="info-to">Tokyo</button>
                     <p class="info info-to">Tokyo; city of flashing neon lights, super-advanced gadgetry, Hello Kitty and about 13 million people, which makes it one of the most densely populated cities in the world. But it’s got more to offer than batteries, bodies and blinking
@@ -96,6 +82,18 @@
                         between lush valleys and rocky heights and overlooked by the great Table Mountain, whether it’s stunning wildlife or crazy nightlife you are after, Cape Town has it in spades. Flights to Cape Town begin at around £400 and peak<br>                        at £600 in the summer months – bear this in mind when booking. A bed in a hostel costs around £7 and you can eat out cheaply too – just get off the main streets and hunt out the smaller places that will offer you cracking seafood<br>                        or game animals by the half kilo. It’s also worth remembering that South Africa is in the Southern Hemisphere so has seasons opposite to the UK’s (their winter is during our summer, etc). Also Cape Town has a Mediterranean-type<br>                        climate with hot summers and warm, wet winters. The South Africans are also well-known for their partying, so will certainly be able to show you a good time if you stop by Cape Town.<br> Written by: <a href="https://www.gapyear.com/articles/travel-ideas/top-5-cities-around-the-world"
                             target="_blank">Dave Owen</a></p>
 
+                </div>
+
+                <!--Contact form -->
+                <div class="col-sm-12 col-md-12 col-lg-12 float-right" id="ct-form">
+                    <div id="cont-form">
+                        <form onsubmit="sendMail(this);" id="form" method="POST">
+                            <input type="text" name="name" class="form-c form-control" id="fullname" placeholder="Name" required/>
+                            <input type="text" name="emailaddress" class="form-c form-control" id="emailaddress" placeholder="Email" required/>
+                            <textarea rows="5" name="projectsummary" class="form-c form-control" id="projectsummary" placeholder="Contact us!" required></textarea>
+                            <button type="submit" class="btn btn-secondary center-block" id="btn-pd">Send Your Request</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

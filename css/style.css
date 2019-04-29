@@ -115,9 +115,9 @@ nav a:hover {
 
 #listing {
     position: absolute;
-    top: 705px;
-    left: 13%;
-    width: 16%;
+    top: 490px;
+    left: 13.5%;
+    width: 200px;
     height: 200px;
     overflow: auto;
     cursor: pointer;
@@ -141,10 +141,6 @@ nav a:hover {
 }
 
 /*------------------- Info -----------*/
-
-.info-div {
-    width: 100%;
-}
 
 .info {
     display: none;
@@ -172,7 +168,7 @@ form input::placeholder {
 }
 
 #ct-form {
-    height: 216px;
+    height: 135px !important;
     position: absolute;
     top: 41px;
     z-index: 7;
